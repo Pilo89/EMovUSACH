@@ -22,18 +22,20 @@
             color: white;
             padding: 20px;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column; /* Cambiado a columna para mejorar la alineación */
+            justify-content: center;
+            align-items: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
             padding: 20px 50px;
-            justify-content: center; /* Cambiado para centrar */
-            text-align: center; /* Centrar todo el contenido */
+            text-align: center;
         }
         .header-content {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 20px; /* Espacio adicional entre el logo y el menú */
         }
         header img {
             height: 60px; /* Tamaño del logo */
@@ -61,7 +63,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center;
+            justify-content: center; /* Centrado del menú */
         }
         nav ul li a {
             color: white;
