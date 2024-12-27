@@ -22,26 +22,33 @@
             background-color: #2E8B57;
             color: white;
             padding: 20px;
-            text-align: center;
             display: flex;
-            flex-direction: column;
             align-items: center;
-        }
-        header h1 {
-            margin: 10px 0;
-            font-size: 1.5em;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Esto separa el logo a la izquierda y el texto al centro */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding: 20px 50px;
         }
         header img {
-            width: 150px; /* Tamaño del logo */
-            height: 150px; /* Hacemos la imagen cuadrada */
+            height: 60px; /* Tamaño del logo */
+            width: 60px;  /* Aseguramos que la imagen sea cuadrada */
             border-radius: 50%; /* Recorte circular */
             object-fit: cover; /* Asegura que la imagen se recorte y ajuste correctamente */
-            margin-bottom: 10px;
+            margin-right: 15px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         header img:hover {
             transform: scale(1.1);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+            animation: fadeIn 1.5s ease;
+            flex: 1;
+            text-align: center;  /* Alineamos el texto hacia el centro */
         }
         main {
             flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
@@ -87,6 +94,16 @@
         }
         ul li a:hover i {
             transform: scale(1.2); /* Efecto de aumento en el ícono al pasar el ratón */
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
