@@ -22,13 +22,22 @@
             color: white;
             padding: 20px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
-            margin: 0;
+            margin: 10px 0;
             font-size: 2em;
             font-weight: 700;
             animation: fadeIn 1.5s ease;
+        }
+        header img {
+            width: 150px; /* Tamaño del logo */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
         main {
             flex: 1;
@@ -112,6 +121,8 @@
 </head>
 <body>
     <header>
+        <!-- Logo de la empresa -->
+        <img src="logo.png" alt="EMovUSACH Logo">
         <h1>EMovUSACH</h1>
     </header>
     <main>
