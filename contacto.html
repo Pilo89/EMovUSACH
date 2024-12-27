@@ -65,37 +65,62 @@
             text-align: center;
             padding: 10px 0;
         }
+        /* Sección de contacto */
+        section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2em;
+            color: #2E8B57;
+            margin-bottom: 20px;
+        }
+        section p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        section a {
+            color: #2E8B57;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section a:hover {
+            color: #FFD700;
+        }
+        /* Lista de redes sociales */
         ul {
             list-style: none;
             padding: 0;
-            text-align: left; /* Ajusta para alineación del texto */
-            max-width: 600px; /* Limita el ancho de la lista */
-            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
         }
         ul li {
-            margin-bottom: 15px; /* Espaciado entre ítems */
-            display: flex;
-            align-items: center;
+            display: inline-block;
+            margin-bottom: 10px;
         }
         ul li a {
             color: #2E8B57;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-            transition: color 0.3s ease;
+            font-size: 1.4em;
+            transition: all 0.3s ease;
         }
         ul li a:hover {
-            color: #FFD700; /* Cambia a dorado al pasar el ratón */
+            color: #FFD700;
+            transform: scale(1.1);
         }
         ul li a i {
-            margin-right: 10px; /* Espacio entre el ícono y el texto */
-            font-size: 1.5em; /* Tamaño de los íconos */
-            transition: transform 0.3s ease;
+            margin-right: 10px;
+            font-size: 1.6em;
         }
-        ul li a:hover i {
-            transform: scale(1.2); /* Efecto de aumento en el ícono al pasar el ratón */
-        }
-
         /* Animaciones */
         @keyframes fadeIn {
             from {
@@ -115,7 +140,7 @@
     </header>
     <main>
         <section>
-            <h2>Contacto</h2>
+            <h2>¡Contáctanos!</h2>
             <p>¿Tienes dudas o necesitas más información? Escríbenos a nuestro correo: <a href="mailto:emovusach@gmail.com">emovusach@gmail.com</a></p>
             <p>Síguenos en nuestras redes sociales:</p>
             <ul>
