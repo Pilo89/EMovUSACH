@@ -66,8 +66,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 25px; /* Aumento el espacio entre los elementos */
-            justify-content: center; /* Asegura que los elementos se centren verticalmente */
+            gap: 25px; /* Espacio entre elementos */
+            justify-content: center; /* Asegura que los elementos estén centrados */
         }
         ul li {
             font-size: 1.2em;
@@ -121,10 +121,31 @@
                 padding: 20px;
             }
             ul {
-                gap: 15px; /* Menos espacio en pantallas pequeñas */
+                gap: 20px; /* Menos espacio entre los elementos en pantallas pequeñas */
+                flex-direction: row; /* Cambiar a distribución horizontal */
+                justify-content: space-between; /* Distribuir los enlaces */
+                width: 100%; /* Asegura que ocupe todo el ancho */
+                padding: 0 20px;
+            }
+            ul li {
+                font-size: 1.1em;
+                flex: 1; /* Hace que cada enlace ocupe espacio proporcional */
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             footer {
                 font-size: 0.8em;
+            }
+        }
+
+        /* Media queries para pantallas muy pequeñas (móviles más estrechos) */
+        @media (max-width: 480px) {
+            ul {
+                gap: 15px; /* Menos espacio aún en pantallas pequeñas */
+                flex-direction: column; /* Cambio de vuelta a columna */
+                padding: 0;
+                width: auto;
             }
         }
     </style>
