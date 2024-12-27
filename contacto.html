@@ -24,11 +24,16 @@
             padding: 20px;
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
-            justify-content: space-between; /* Esto separa el logo a la izquierda y el texto al centro */
+            justify-content: center; /* Centra los elementos */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
             padding: 20px 50px;
+            flex-wrap: wrap;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         header img {
             height: 60px; /* Tamaño del logo */
@@ -47,7 +52,6 @@
             font-size: 2.5em;
             font-weight: 700;
             animation: fadeIn 1.5s ease;
-            flex: 1;
             text-align: center;  /* Alineamos el texto hacia el centro */
         }
         main {
@@ -151,9 +155,11 @@
 </head>
 <body>
     <header>
-        <!-- Logo de la empresa -->
-        <img src="logo.png" alt="EMovUSACH Logo">
-        <h1>EMovUSACH</h1>
+        <div class="header-content">
+            <!-- Logo de la empresa -->
+            <img src="logo.png" alt="EMovUSACH Logo">
+            <h1>EMovUSACH</h1>
+        </div>
     </header>
     <main>
         <section>
