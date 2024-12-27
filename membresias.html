@@ -6,49 +6,107 @@
     <title>Membresías - EMovUSACH</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Estilos base */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+            min-height: 100vh;
         }
         header {
             background-color: #2E8B57;
             color: white;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 2em;
+            font-weight: 700;
+            animation: fadeIn 1.5s ease;
         }
         main {
-            flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 30px 20px;
+            animation: fadeInUp 1.5s ease;
+        }
+        .membership-list {
+            list-style: none;
+            padding: 0;
+            max-width: 800px;
+            width: 100%;
+            text-align: left;
+            margin-top: 30px;
+        }
+        .membership-list li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
             padding: 20px;
-            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .membership-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .membership-list strong {
+            font-size: 1.2em;
+            color: #2E8B57;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
+            font-size: 0.9em;
+            margin-top: 30px;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-            text-align: left; /* Ajusta para alineación del texto */
-            max-width: 600px; /* Limita el ancho de la lista */
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-        ul li {
-            margin-bottom: 15px; /* Espaciado entre ítems */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media queries para pantallas pequeñas (móviles) */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+            .membership-list {
+                padding: 0 10px;
+            }
+            .membership-list li {
+                padding: 15px;
+            }
+            footer {
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
@@ -59,11 +117,19 @@
     <main>
         <section>
             <h2>Membresías</h2>
-            <ul>
-                <li><strong>Comunidad Universitaria Estándar:</strong> $7,000 CLP/mes o $84,000 CLP/año. Incluye 150 minutos de uso al mes. Cobro adicional de $40 CLP/min después de los 60 minutos.</li>
-                <li><strong>Comunidad Universitaria Premium:</strong> $10,000 CLP/mes o $120,000 CLP/año. Uso ilimitado dentro del campus.</li>
-                <li><strong>Estándar General:</strong> $10,000 CLP/mes o $120,000 CLP/año. Incluye 45 minutos de uso. Cobro adicional de $50 CLP/min después de los 45 minutos.</li>
-                <li><strong>Premium General:</strong> $15,000 CLP/mes o $180,000 CLP/año. Uso ilimitado.</li>
+            <ul class="membership-list">
+                <li>
+                    <strong>Comunidad Universitaria Estándar:</strong> $7,000 CLP/mes o $84,000 CLP/año. Incluye 150 minutos de uso al mes. Cobro adicional de $40 CLP/min después de los 60 minutos.
+                </li>
+                <li>
+                    <strong>Comunidad Universitaria Premium:</strong> $10,000 CLP/mes o $120,000 CLP/año. Uso ilimitado dentro del campus.
+                </li>
+                <li>
+                    <strong>Estándar General:</strong> $10,000 CLP/mes o $120,000 CLP/año. Incluye 45 minutos de uso. Cobro adicional de $50 CLP/min después de los 45 minutos.
+                </li>
+                <li>
+                    <strong>Premium General:</strong> $15,000 CLP/mes o $180,000 CLP/año. Uso ilimitado.
+                </li>
             </ul>
         </section>
     </main>
