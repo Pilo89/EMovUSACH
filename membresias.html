@@ -22,12 +22,18 @@
             color: white;
             padding: 20px;
             display: flex;
-            align-items: center;
             flex-wrap: wrap;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             position: relative;
             padding: 20px 50px;
-            justify-content: space-between;
+            justify-content: center; /* Cambiado para centrar */
+            text-align: center; /* Centrar todo el contenido */
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         header img {
             height: 60px; /* Tamaño del logo */
@@ -47,7 +53,6 @@
             font-weight: 700;
             animation: fadeIn 1.5s ease;
             flex: 1;
-            text-align: center;  /* Alineamos el texto hacia el centro */
         }
         nav ul {
             list-style: none;
@@ -153,7 +158,6 @@
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
-                text-align: center;
                 padding: 20px 30px;
             }
             header img {
@@ -182,9 +186,11 @@
 </head>
 <body>
     <header>
-        <!-- Logo de la empresa -->
-        <img src="logo.png" alt="EMovUSACH Logo">
-        <h1>EMovUSACH</h1>
+        <div class="header-content">
+            <!-- Logo de la empresa -->
+            <img src="logo.png" alt="EMovUSACH Logo">
+            <h1>EMovUSACH</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
