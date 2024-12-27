@@ -21,29 +21,52 @@
             background-color: #2E8B57;
             color: white;
             padding: 20px;
-            text-align: center;
             display: flex;
-            flex-direction: column;
             align-items: center;
+            flex-wrap: wrap;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            margin: 10px 0;
-            font-size: 2em;
-            font-weight: 700;
-            animation: fadeIn 1.5s ease;
+            position: relative;
+            padding: 20px 50px;
+            justify-content: space-between;
         }
         header img {
-            width: 150px; /* Tamaño del logo */
-            height: 150px; /* Hacemos la imagen cuadrada */
+            height: 60px; /* Tamaño del logo */
+            width: 60px;  /* Aseguramos que la imagen sea cuadrada */
             border-radius: 50%; /* Recorte circular */
-            object-fit: cover; /* Asegura que la imagen se recorte y ajuste correctamente */
-            margin-bottom: 10px;
+            object-fit: cover; /* Asegura que la imagen se recorte sin distorsionarse */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-right: 15px; /* Espacio entre el logo y el texto */
         }
         header img:hover {
             transform: scale(1.1);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+            animation: fadeIn 1.5s ease;
+            flex: 1;
+            text-align: center;  /* Alineamos el texto hacia el centro */
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            font-size: 1.1em;
+        }
+        nav ul li a:hover {
+            color: #FFD700;
         }
         main {
             flex: 1;
@@ -51,8 +74,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 30px 20px;
-            animation: fadeInUp 1.5s ease;
+            padding: 20px;
+            text-align: center;
         }
         .membership-list {
             list-style: none;
@@ -110,8 +133,22 @@
 
         /* Media queries para pantallas pequeñas (móviles) */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.6em;
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 30px;
+            }
+            header img {
+                margin-bottom: 15px;
+            }
+            nav ul {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            nav ul li {
+                margin: 0;
             }
             .membership-list {
                 padding: 0 10px;
@@ -130,7 +167,15 @@
         <!-- Logo de la empresa -->
         <img src="logo.png" alt="EMovUSACH Logo">
         <h1>EMovUSACH</h1>
+        <nav>
+            <ul>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="membresias.html">Membresías</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
         <section>
             <h2>Membresías</h2>
