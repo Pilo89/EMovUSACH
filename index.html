@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
-            color: #333;
+            color: #333; /* Texto predeterminado en color oscuro */
         }
         header {
             background-color: #2E8B57;
@@ -45,8 +45,8 @@
             padding: 20px;
         }
         .hero {
-            background: url('https://via.placeholder.com') no-repeat center center/cover;
-            color: white;
+            background: url('https://via.placeholder.com/') no-repeat center center/cover;
+            color: #333; /* Cambiar texto a oscuro */
             text-align: center;
             padding: 100px 20px;
         }
@@ -83,7 +83,12 @@
                 padding-top: 10px;
             }
             nav ul li {
-                margin: 10px 0;
+                margin: 15px 0; /* Más margen entre las opciones de navegación */
+            }
+            .hero {
+                background-color: #d3d3d3; /* Fondo gris claro para contraste */
+                color: #000; /* Texto oscuro en dispositivos móviles */
+                padding: 50px 10px;
             }
             .hero h2 {
                 font-size: 1.8em;
@@ -120,4 +125,3 @@
     </footer>
 </body>
 </html>
-
