@@ -3,31 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros - EMovUSACH</title>
+    <title>EMovUSACH - Movilidad Sostenible</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Estilos base */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+            min-height: 100vh;
         }
         header {
             background-color: #2E8B57;
             color: white;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 2em;
+            font-weight: 700;
+            animation: fadeIn 1.5s ease;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #FFD700;
         }
         main {
-            flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -35,24 +59,130 @@
             padding: 20px;
             text-align: center;
         }
+        .hero {
+            background: linear-gradient(rgba(46, 139, 87, 0.7), rgba(46, 139, 87, 0.7)), url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
+            color: white;
+            width: 100%;
+            padding: 100px 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+            animation: fadeInUp 1.5s ease;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin: 0;
+            animation: zoomIn 1.2s ease;
+        }
+        .hero p {
+            font-size: 1.4em;
+            margin-top: 10px;
+        }
+        .cta {
+            margin-top: 30px;
+        }
+        .cta a {
+            background-color: #FFD700;
+            color: #2E8B57;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .cta a:hover {
+            background-color: #2E8B57;
+            color: white;
+            transform: scale(1.05);
+        }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 15px 0;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Media queries para pantallas pequeñas (móviles) */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            nav ul li {
+                margin: 0;
+            }
+            .hero {
+                padding: 80px 15px;
+            }
+            .hero h2 {
+                font-size: 2em;
+            }
+            .cta a {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>EMovUSACH</h1>
+        <nav>
+            <ul>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="membresias.html">Membresías</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <section>
-            <h2>Sobre Nosotros</h2>
-            <p>EMovUSACH es un servicio de movilidad sostenible diseñado para estudiantes, profesores y trabajadores de la Universidad de Santiago de Chile. Ofrecemos scooters y bicicletas eléctricas con estaciones de carga ubicadas estratégicamente en el campus para facilitar tu desplazamiento de manera rápida y respetuosa con el medio ambiente.</p>
+        <section class="hero">
+            <h2>Movilidad Sostenible para la Comunidad USACH</h2>
+            <p>Descubre la manera más eficiente, ecológica y moderna de moverte por el campus.</p>
+            <div class="cta">
+                <a href="#app">¡Descarga nuestra aplicación!</a>
+            </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 EMovUSACH. Todos los derechos reservados.</p>
     </footer>
