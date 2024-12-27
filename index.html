@@ -31,8 +31,9 @@
         }
         header img {
             height: 60px; /* Tamaño del logo */
-            width: auto;
-            border-radius: 50%;
+            width: 60px;  /* Aseguramos que la imagen sea cuadrada */
+            border-radius: 50%; /* Recorte circular */
+            object-fit: cover; /* Asegura que la imagen se recorte sin distorsionarse */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         header img:hover {
