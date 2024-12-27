@@ -35,9 +35,15 @@
         }
         header img {
             width: 150px; /* Tamaño del logo */
-            height: auto;
-            border-radius: 10px;
+            height: 150px; /* Hacemos la imagen cuadrada */
+            border-radius: 50%; /* Recorte circular */
+            object-fit: cover; /* Asegura que la imagen se recorte y ajuste correctamente */
             margin-bottom: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        header img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
         main {
             flex: 1;
