@@ -4,149 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - EMovUSACH</title>
+    <!-- Incluir Font Awesome desde el CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilos base */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
         }
         header {
             background-color: #2E8B57;
             color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 2em;
-            font-weight: 700;
-            animation: fadeIn 1.5s ease;
+            font-size: 1.5em;
         }
         main {
-            flex: 1;
+            flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px 20px;
-            animation: fadeInUp 1.5s ease;
-        }
-        h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #2E8B57;
-        }
-        p {
-            font-size: 1.1em;
-            margin: 10px 0;
-            color: #555;
-        }
-        a {
-            color: #2E8B57;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #FFD700;
-            text-decoration: underline;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 25px; /* Espacio entre elementos */
-            justify-content: center; /* Asegura que los elementos estén centrados */
-        }
-        ul li {
-            font-size: 1.2em;
-        }
-        ul li a {
-            padding: 10px 20px;
-            border-radius: 5px;
-            background-color: #2E8B57;
-            color: white;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        ul li a:hover {
-            background-color: #FFD700;
-            transform: translateY(-5px);
+            padding: 20px;
+            text-align: center;
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 10px 0;
-            font-size: 0.9em;
-            margin-top: 30px;
         }
-
-        /* Animaciones */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left; /* Ajusta para alineación del texto */
+            max-width: 600px; /* Limita el ancho de la lista */
+            margin-top: 20px;
         }
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        ul li {
+            margin-bottom: 15px; /* Espaciado entre ítems */
+            display: flex;
+            align-items: center;
         }
-
-        /* Media queries para pantallas pequeñas (móviles) */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.6em;
-            }
-            main {
-                padding: 20px;
-            }
-            ul {
-                gap: 20px; /* Menos espacio entre los elementos en pantallas pequeñas */
-                flex-direction: row; /* Cambiar a distribución horizontal */
-                justify-content: space-between; /* Distribuir los enlaces */
-                width: 100%; /* Asegura que ocupe todo el ancho */
-                padding: 0 20px;
-            }
-            ul li {
-                font-size: 1.1em;
-                flex: 1; /* Hace que cada enlace ocupe espacio proporcional */
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            footer {
-                font-size: 0.8em;
-            }
+        ul li a {
+            color: #2E8B57;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
         }
-
-        /* Media queries para pantallas muy pequeñas (móviles más estrechos) */
-        @media (max-width: 480px) {
-            ul {
-                gap: 15px; /* Menos espacio aún en pantallas pequeñas */
-                flex-direction: column; /* Cambio de vuelta a columna */
-                padding: 0;
-                width: auto;
-            }
+        ul li a:hover {
+            color: #FFD700; /* Cambia a dorado al pasar el ratón */
+        }
+        ul li a i {
+            margin-right: 10px; /* Espacio entre el ícono y el texto */
+            font-size: 1.5em; /* Tamaño de los íconos */
+            transition: transform 0.3s ease;
+        }
+        ul li a:hover i {
+            transform: scale(1.2); /* Efecto de aumento en el ícono al pasar el ratón */
         }
     </style>
 </head>
@@ -160,9 +85,9 @@
             <p>¿Tienes dudas o necesitas más información? Escríbenos a nuestro correo: <a href="mailto:emovusach@gmail.com">emovusach@gmail.com</a></p>
             <p>Síguenos en nuestras redes sociales:</p>
             <ul>
-                <li><a href="https://www.instagram.com/emovusach" target="_blank">Instagram</a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=61571130816071" target="_blank">Facebook</a></li>
-                <li><a href="#" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com/emovusach" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61571130816071" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
             </ul>
         </section>
     </main>
